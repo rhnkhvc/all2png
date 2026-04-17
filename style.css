@@ -366,3 +366,21 @@ footer {
     .result-item { flex-direction: column; gap: 1rem; align-items: stretch; text-align: center; }
     .btn-download { justify-content: center; }
 }
+
+/* Tool Badge */
+.tool-badge {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.3s ease;
+}
+.tool-badge:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
