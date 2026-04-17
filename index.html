@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All2PNG | Free, Fast, and Secure All Formats to PNG Converter</title>
+    <meta name="description" content="100% Free, Private, and Fast File Converter. Convert PDF, SVG, JPG, WebP, and BMP to PNG directly in your browser. No server uploads.">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/></svg>
+            All2<span>PNG</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#privacy">Privacy & Terms</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <div class="secure-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                100% Secure & Local Processing
+            </div>
+            <h1>Convert <span class="gradient-text">Any Format</span> to PNG Instantly</h1>
+            <p>Your files never leave your device. Fast, free, and completely private conversion.</p>
+        </header>
+
+        <!-- Google AdSense Placeholder (Top) -->
+        <div class="ad-placeholder top-ad">
+            <span>Advertisement</span>
+        </div>
+
+        <section class="converter-box">
+            <div class="drop-zone" id="dropZone">
+                <input type="file" id="fileInput" accept=".pdf, .svg, .jpg, .jpeg, .webp, .bmp, .heic" multiple hidden>
+                <div class="drop-content">
+                    <div class="icon-container">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    </div>
+                    <h3>Drag & Drop your files here</h3>
+                    <p>or click to browse from device</p>
+                    <span class="supported-formats">Supported formats: PDF, SVG, JPG, WEBP, BMP</span>
+                </div>
+            </div>
+
+            <div id="statusContainer" class="status-container hidden">
+                <h4 id="statusTitle">Processing Files...</h4>
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <p id="statusMessage">Initializing...</p>
+            </div>
+            
+            <div id="resultsContainer" class="results-container hidden">
+                <!-- Download buttons will be injected here -->
+            </div>
+        </section>
+
+        <!-- Google AdSense Placeholder (Bottom) -->
+        <div class="ad-placeholder bottom-ad">
+            <span>Advertisement</span>
+        </div>
+
+        <section id="about" class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Uses your computer's resources to convert files immediately. No waiting in server queues.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>100% Private</h3>
+                <p>We do not have a server to upload to. Everything happens inside your web browser.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>HQ Export</h3>
+                <p>Vectors and PDFs are rendered into high-quality, uncompressed transparent PNGs.</p>
+            </div>
+        </section>
+
+        <section class="seo-faq">
+            <div class="faq-container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>Is All2PNG really free and secure?</h3>
+                    <p>Yes, 100% free forever. Your files are completely safe because our tool operates entirely within your web browser using client-side scripts. We <strong>never</strong> upload, store, or view your files on any external servers. Your data never leaves your device.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I convert WebP to PNG without losing quality?</h3>
+                    <p>WebP is a great modern format, but PNG offers universal compatibility and lossless transparency. Simply drag your WebP image into our tool, and our browser engine will instantly create a pixel-perfect, lossless PNG copy for you.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Why convert PDF or SVG to PNG?</h3>
+                    <p>PDFs and SVGs are excellent for documents and vector graphics, but they aren't always supported by basic image viewers or social media platforms. Converting them to PNG gives you universally accepted images with transparent backgrounds, ready for web use, presentations, and sharing.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="privacy">
+            <div class="footer-content">
+                <p><strong>Disclaimer:</strong> All2PNG is a client-side tool. By using this service, you acknowledge that you are responsible for any copyright or licensing rules pertaining to the files you convert. We do not store, view, or distribute your files.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="mailto:admin@all2png.com">Contact</a>
+                </div>
+                <p class="copyright">&copy; 2026 All2PNG. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
