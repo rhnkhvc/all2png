@@ -376,8 +376,13 @@
                 }
 
                 try {
+                    // Determine the API base URL dynamically:
+                    // Use relative path for local testing, otherwise use the deployed Render API URL.
+                    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                    const apiEndpoint = isLocal ? '/api/convert' : 'https://all2png-api.onrender.com/api/convert';
+
                     // Send to our Flask API server
-                    const response = await fetch('/api/convert', {
+                    const response = await fetch(apiEndpoint, {
                         method: 'POST',
                         body: formData
                     });
