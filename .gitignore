@@ -1,0 +1,17 @@
+# Python virtual environment
+cad-converter/.venv/
+cad-converter/__pycache__/
+cad-converter/bin/
+cad-converter/temp_extracted/
+
+# Logs and scratch files
+*.log
+cad-converter/*.log
+cad-converter/test_*.py
+cad-converter/search_*.py
+cad-converter/uploaded_*
+cad-converter/test_*
+
+# OS specific files
+.DS_Store
+Thumbs.db

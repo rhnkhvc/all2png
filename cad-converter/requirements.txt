@@ -1,0 +1,5 @@
+ezdxf>=1.1.0
+matplotlib>=3.7.0
+Pillow>=9.5.0
+Flask>=2.0.0
+flask-cors>=3.0.0
